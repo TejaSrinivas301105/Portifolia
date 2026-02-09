@@ -66,64 +66,99 @@ const Work = () => {
 
       {/* Modal Container */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4">
-          <div className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl overflow-hidden relative">
-            <div className="flex justify-end p-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center 
+                bg-black/80 backdrop-blur-sm p-4 animate-fadeIn">
+  
+            <div className="relative bg-gradient-to-br from-[#1b1b2f] via-[#1f1f3a] to-[#141426]
+                            rounded-2xl shadow-2xl
+                            w-full max-w-3xl overflow-hidden
+                            border border-white/10">
+
+              {/* Shine overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent 
+                              opacity-0 hover:opacity-100 transition duration-700 pointer-events-none" />
+
+              {/* Close button */}
               <button
                 onClick={handleCloseModal}
-                className="text-white text-3xl font-bold hover:text-purple-500"
+                aria-label="Close modal"
+                className="absolute top-4 right-4 text-white/70 text-3xl 
+                          hover:text-purple-400 transition"
               >
                 &times;
               </button>
-            </div>
 
-            <div className="flex flex-col">
-              <div className="w-full flex justify-center bg-gray-900 px-4">
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="lg:w-full w-[95%] object-contain rounded-xl shadow-2xl"
-                />
-              </div>
-              <div className="lg:p-8 p-6">
-                <h3 className="lg:text-3xl font-bold text-white mb-4 text-md">
-                  {selectedProject.title}
-                </h3>
-                <p className="text-gray-400 mb-6 lg:text-base text-xs">
-                  {selectedProject.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {selectedProject.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+              {/* Content */}
+              <div className="flex flex-col">
+                
+                {/* Image */}
+                <div className="p-6 flex justify-center">
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className="w-full max-h-[300px] object-contain rounded-xl 
+                              shadow-xl border border-white/10"
+                  />
                 </div>
-                <div className="flex gap-4">
-                  <a
-                    href={selectedProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-1/2 bg-gray-800 hover:bg-purple-800 text-gray-400 lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center"
-                  >
-                    View Code
-                  </a>
-                  <a
-                    href={selectedProject.webapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-1/2 bg-purple-600 hover:bg-purple-800 text-white lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center"
-                  >
-                    View Live
-                  </a>
+
+                {/* Details */}
+                <div className="px-8 pb-8">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">
+                    {selectedProject.title}
+                  </h3>
+
+                  <p className="text-purple-400 text-sm mb-4">
+                    {selectedProject.role}
+                  </p>
+
+                  <p className="text-gray-300 text-sm lg:text-base leading-relaxed mb-6">
+                    {selectedProject.description}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {selectedProject.tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 text-xs rounded-full
+                                  bg-purple-500/10 text-purple-400
+                                  border border-purple-500/20"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Actions */}
+                  <div className="flex gap-4">
+                    <a
+                      href={selectedProject.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 py-2 rounded-xl text-center
+                                bg-white/10 text-gray-300
+                                hover:bg-purple-500/20 hover:text-purple-300
+                                transition font-semibold"
+                    >
+                      View Code
+                    </a>
+
+                    <a
+                      href={selectedProject.webapp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 py-2 rounded-xl text-center
+                                bg-purple-600 text-white
+                                hover:bg-purple-700
+                                transition font-semibold"
+                    >
+                      View Live
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
       )}
     </section>
   );
