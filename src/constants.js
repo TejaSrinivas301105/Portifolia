@@ -131,7 +131,7 @@ export const education = [
 
 export const projects = [
   {
-    id: 3,
+    id: 4,
     title: "FinMate(Finance Tracker)",
     description:
       "Built a full-stack(java backend) finance tracker for students to manage income, expenses, and budgets. Features include JWT auth, encrypted passwords, interactive dashboards (Recharts), recurring transactions, and dynamic filtering. Stack: React.js, Tailwind CSS, Express.js, MongoDB Atlas.",
@@ -172,7 +172,7 @@ export const projects = [
     github: "https://github.com/TejaSrinivas301105/Crowd_Sense",
   },
   {
-    id: 2,
+    id: 5,
     title: "Task Management",
     description:
       "A Task Management system helps you plan, organize, track, and complete tasks efficiently by grouping work into stages like To Do, In Progress, and Completed, improving productivity and clarity",
@@ -190,4 +190,39 @@ export const projects = [
     github: "https://github.com/TejaSrinivas301105/TaskMangement",
     webapp: "https://iridescent-llama-adac70.netlify.app/",
   },
+  {
+  id: 2,
+  title: "KrushiMithr",
+  description:
+    "A smart agriculture marketplace platform built with Java and Spring Boot that connects farmers directly with buyers, providing catalog search, inventory management, and live price tracking through secure RESTful APIs",
+  image: KrushiMithrLogo,
+  tags: [
+    "Java",
+    "Spring Boot",
+    "Spring MVC",
+    "REST API",
+    "PostgreSQL",
+    "Supabase",
+    "JPA",
+    "Hibernate"
+  ],
+},
+{
+  id: 3,
+  title: "AI Interview",
+  description:
+    "An AI-powered technical screening platform that conducts live voice interviews, generates adaptive questions based on resumes, evaluates candidate responses, and provides comprehensive performance reports using RAG and LLM technologies",
+  image: AIInterviewLogo,
+  tags: [
+    "React JS",
+    "FastAPI",
+    "Python",
+    "Groq LLaMA",
+    "RAG",
+    "ElevenLabs",
+    "Tailwind CSS",
+    "Framer Motion",
+    "DataHaven"
+  ],
+},
 ];
