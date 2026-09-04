@@ -25,13 +25,13 @@ const Education = () => {
         <div className="flex flex-col sm:flex-row items-center mb-16 sm:justify-start">
           <div className="w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] sm:ml-44 ml-8 hover:scale-105 transition-transform duration-300">
             <h3 className="text-xl font-semibold text-white">
-              Bachelor of Technology (B.Tech) – 3rd Year
+              Bachelor of Technology (B.Tech) – 4th Year
             </h3>
             <h4 className="text-md text-gray-300">
               Vellore Institute of Technology, Andhra Pradesh
             </h4>
             <p className="text-sm text-gray-500 mt-2">2022 – Present</p>
-            <p className="mt-4 text-gray-400 font-bold">CGPA: 9.13</p>
+            <p className="mt-4 text-gray-400 font-bold">CGPA: 9.17</p>
           </div>
         </div>
 
