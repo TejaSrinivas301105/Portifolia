@@ -44,6 +44,8 @@ import githubdetLogo from "./assets/work_logo/FinMate.jpg";
 import TodoListLogo from "./assets/work_logo/TodoList.png";
 import TicketSupportLogo from "./assets/work_logo/TickectSuportLogo.png";
 import CrowdSense from "./assets/work_logo/CrowdSense.png";
+import KrushiMithrLogo from "./assets/work_logo/KrushiMithr.png";
+import AIInterviewLogo from "./assets/work_logo/AIInterview.png";
 
 
 export const SkillsInfo = [
